@@ -37,8 +37,8 @@ section {
 }
 
 .calculator {
-    width: 40%;
-    height: 75%;
+    width: 35%;
+    height: 70%;
     background-color: hsl(222, 26%, 31%);
     display: flex;
     flex-direction: column;
@@ -103,6 +103,43 @@ section {
     height: 70%;
     width: 100%;
     background-color: hsl(223, 31%, 20%)
+}
+
+.key-operator {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    padding: 5%;
+    flex-wrap: wrap;
+}
+
+.key-operator div {
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: hsl(224, 28%, 35%);
+    box-shadow: 0 -0.2vw 0 #B4A597 inset;
+    color: hsl(221, 14%, 31%);
+    font-size: 32px;
+    width: 20%;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.reset,
+.egal {
+    width: 45% !important;
+}
+
+.x,
+.egal,
+.del,
+.reset {
+    font-size: 1.2em !important;
 }
 
 
