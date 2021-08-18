@@ -10,8 +10,8 @@ Je me suis notamment documenté via cette video : https://www.youtube.com/watch?
 
 ## Author
 
-- Website - [Add your name here](https://www.portfolio-dev.apeposi.fr.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/Lunesti)
+- Website - [Arben PEPOSI](https://www.portfolio-dev.apeposi.fr.com)
+- Frontend Mentor (https://www.frontendmentor.io/profile/Lunesti)
 
 
 
