@@ -10,7 +10,7 @@ Je me suis notamment documenté via cette video : https://www.youtube.com/watch?
 
 ## Author
 
-- Website - [Arben PEPOSI](https://www.portfolio-dev.apeposi.fr.com)
+- Website - [Arben PEPOSI](https://www.portfolio-dev.apeposi.fr)
 - Frontend Mentor (https://www.frontendmentor.io/profile/Lunesti)
 
 
