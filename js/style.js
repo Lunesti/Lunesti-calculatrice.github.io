@@ -1,9 +1,17 @@
 /*----DOM-----*/
 
 const form = document.getElementById("myForm");
-const del = document.querySelector('form input[name="del"]');
-const reset = document.querySelector('form input[name="reset"]');
+const del = document.querySelector('input[name="del"]');
+const reset = document.querySelector('input[name="reset"]');
+const egal = document.querySelector('input[name="egal"]');
 let display = document.querySelector('.display');
+let head = document.querySelector('.head');
+const input = document.querySelector('.switch > input');
+const theme = document.querySelector('.theme');
+const themeNumber = document.querySelector('.theme-choose');
+const themeCalculator = document.querySelector('.calculator');
+const themeButton = document.querySelector('.key');
+const section = document.querySelector('section');
 
 
 //Valeur par défaut du display 
@@ -88,4 +96,43 @@ function calcul(nb1, nb2, operator) {
     if (operator === "*") return nb1 * nb2;
     if (operator === "-") return nb1 - nb2;
     if (operator === "/") return nb1 / nb2;
+}
+
+
+/*----Bouton changeur de thème--- */
+input.addEventListener('click', clickEvent);
+
+function clickEvent() {
+    console.log("On a cliqué une fois sur le input")
+    if (input.checked) {
+        section.style.backgroundColor = "hsl(0, 0%, 90%)";
+        themeCalculator.style.backgroundColor = "hsl(0, 0%, 90%)";
+        themeButton.style.backgroundColor = "hsl(0, 5%, 81%)";
+        display.style.backgroundColor = "hsl(0, 0%, 93%)";
+        display.style.color = "#000";
+        head.style.color = "#000";
+        theme.style.color = "#000";
+        themeNumber.style.color = "#000";
+        del.style.backgroundColor = "hsl(185, 42%, 37%)";
+        reset.style.backgroundColor = "hsl(185, 42%, 37%)";
+        del.style['boxShadow'] = "0 -0.2vw 0 hsl(185, 58%, 25%) inset";
+        reset.style.boxShadow = "0 -0.2vw 0 hsl(185, 58%, 25%) inset";
+        egal.style.backgroundColor = "hsl(25, 98%, 40%)";
+        egal.style.boxShadow = "0 -0.2vw 0 hsl(25, 99%, 27%) inset";
+    } else {
+        section.style.backgroundColor = "hsl(222, 26%, 31%)";
+        themeCalculator.style.backgroundColor = "hsl(222, 26%, 31%)";
+        themeButton.style.backgroundColor = "hsl(223, 31%, 20%)";
+        display.style.backgroundColor = "hsl(224, 36%, 15%)";
+        display.style.color = "#FFF";
+        head.style.color = "#FFF";
+        theme.style.color = "#FFF";
+        themeNumber.style.color = "#FFF";
+        del.style.backgroundColor = "hsl(225, 21%, 49%)";
+        reset.style.backgroundColor = "hsl(225, 21%, 49%)";
+        del.style.boxShadow = "0 -0.2vw 0 #404E72 inset";
+        reset.style.boxShadow = "0 -0.2vw 0 #404E72 inset";
+        egal.style.boxShadow = "0 -0.2vw 0 #93261A inset";
+
+    }
 }
