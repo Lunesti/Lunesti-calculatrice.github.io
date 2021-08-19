@@ -18,7 +18,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: auto;
 }
 
 * {
@@ -251,4 +251,11 @@ form input:hover {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media all and (max-device-width:375px) {
+    section,
+    .calculator {
+        width: auto;
+    }
 }
