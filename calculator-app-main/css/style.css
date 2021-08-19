@@ -1,0 +1,261 @@
+@font-face {
+    font-family: "SpartanRegular";
+    src: url("../font/static/Spartan-Regular.ttf");
+}
+
+@font-face {
+    font-family: "SpartanBold";
+    src: url("../font/static/Spartan-Bold.ttf");
+}
+
+@font-face {
+    font-family: "SpartanLight";
+    src: url("../font/static/Spartan-Light.ttf");
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+
+* {
+    font-family: SpartanBold, sans-serif;
+    text-transform: uppercase;
+}
+
+section {
+    margin: auto;
+    width: 1440px;
+    height: 100vh;
+    background-color: hsl(222, 26%, 31%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculator {
+    width: 35%;
+    height: 700px;
+    background-color: hsl(222, 26%, 31%);
+    display: flex;
+    border-radius: 5px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.head {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.theme {
+    position: relative;
+    width: 160px;
+    align-self: flex-end;
+}
+
+.theme-choose,
+.theme-button,
+.theme,
+.head {
+    color: #FFF;
+}
+
+.theme-choose {
+    width: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    float: right;
+    margin-left: 80px;
+}
+
+.theme p {
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+}
+
+.theme-choose span:nth-child(2) {
+    padding-left: 35px;
+}
+
+.theme-button {
+    height: 25px;
+    width: 100%;
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 30px;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 24px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+
+/* The slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 35px;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    background-color: hsl(6, 63%, 50%);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(45px);
+    -ms-transform: translateX(45px);
+    transform: translateX(45px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 32px;
+    color: #FFF;
+    height: 50px;
+    border-radius: 10px;
+    padding: 7.5%;
+    background-color: hsl(224, 36%, 15%)
+}
+
+.display,
+.key {
+    border-radius: 10px;
+}
+
+.key {
+    height: 450px;
+    width: 100%;
+    background-color: hsl(223, 31%, 20%)
+}
+
+form {
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    padding: 5%;
+    flex-wrap: wrap;
+}
+
+form input {
+    background-color: hsl(30, 25%, 89%);
+    box-shadow: hsl(224, 28%, 35%);
+    box-shadow: 0 -0.2vw 0 #B4A597 inset;
+    color: hsl(221, 14%, 31%);
+    font-size: 32px;
+    width: 20%;
+    height: 60px;
+    border-radius: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+input[name="reset"],
+input[name="egal"] {
+    width: 45% !important;
+}
+
+input[name="x"],
+input[name="egal"],
+input[name="del"],
+input[name="reset"] {
+    font-size: 1.2em !important;
+}
+
+input[name="egal"] {
+    color: #FFF !important;
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0 -0.2vw 0 #93261A inset;
+}
+
+input[name="reset"],
+input[name="del"] {
+    color: #FFF !important;
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0 -0.2vw 0 #404E72 inset;
+}
+
+form input:hover {
+    cursor: pointer;
+}
+
+
+/* ---------------- */
+
+.attribution {
+    margin-top: 10px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media all and (max-device-width:375px) {
+    section,
+    .calculator {
+        width: auto;
+    }
+}
